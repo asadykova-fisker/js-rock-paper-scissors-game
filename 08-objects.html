@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      //   const product = {
+      //     name: "socks",
+      //     price: 1090,
+      //   };
+      //   console.log(product);
+
+      //   //   replacing existing value of a property
+      //   product.name = "cotton socks";
+      //   console.log(product);
+
+      //   //   adding new property
+      //   product.newProperty = true;
+      //   console.log(product);
+
+      //   //   delete property
+      //   delete product.newProperty;
+      //   console.log(product);
+
+      // AUTO-BOXING. STRING METHODS
+      console.log("hello".length);
+      console.log("hello".toUpperCase());
+
+      // OBJECTS ARE REFERENCES
+      //  const object1 = reference
+      const object1 = {
+        message: "hello",
+      };
+      const object2 = object1; //JS copies reference, not the object
+
+      object1.message = "Good job!";
+      console.log(object1); //since the variable contains a reference, even if we use const, we still can change the reference
+      console.log(object2);
+
+      // WE CANNOT COMPARE OBJECTS DIRECTLY
+      const object3 = {
+        message: "Good job!",
+      };
+      console.log(object3 === object1); // false: they are not equal because compares references, not values
+      console.log(object2 === object1); // true: because we assign same reference to object 2 and object1
+
+      // SHORTSCUTS FOR OBJECTS
+      const object4 = {
+        message: "Good job!",
+        price: 799,
+      };
+      //   const message = object4.message;
+      //   *******
+      const { message, price } = object4; // DESTRUCTRING to take property out of an object
+      console.log("price", price);
+
+      //   *******
+      const object5 = {
+        // message: message
+        message, // SHORTHAND property
+        // method: function function1() {
+        //   console.log("methods");
+        // },
+        method() {
+          console.log("methods"); // SHORTHAND METHOD
+        },
+      };
+      console.log("object5", object5);
+      object5.method();
+    </script>
+  </body>
+</html>
