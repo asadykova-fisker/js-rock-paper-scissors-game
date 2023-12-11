@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM</title>
+  </head>
+  <body>
+    <button>HELLO</button>
+    <button class="js-button">Second button</button>
+    <script>
+      // !!!! DOM gives full control to JS !!!!
+
+      // // ********** METHODS
+      console.log(document.querySelector("button").innerHTML); //it gets any element on the page to JS
+      document.querySelector("button").innerHTML = "SUBMIT"; //changes the text inside the element
+
+      // // ********** Class Attribute
+      console.log(document.querySelector(".js-button"));
+      const buttonElement = document.querySelector(".js-button");
+      console.log(buttonElement);
+
+      //   console.log(document.title); //title of the tab
+      //   document.title = "changed";
+
+      //  // ********** document
+      //   console.log(document.body); //same as html body
+      //   console.log(typeof document.body); //object
+
+      //   console.log(document.body.innerHTML); //gives all in html
+      //   document.body.innerHTML = "<button>TEST</button>"; //we can replace body in html with whatever we want
+
+      //   ********** DOM document object model - it models the webpage
+      //   document.body.innerHTML = "hello"; //build in object
+      //   document.title = "Good job!";
+    </script>
+  </body>
+</html>
